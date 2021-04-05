@@ -1,0 +1,52 @@
+<html>
+<form action="/cgi-bin/snow.py" target="bottom">
+URI: <input name="uri" type="text" value="/incident.do" size=30>
+API: <select name="export">
+  <option value="CSV">CSV</option>
+  <option value="XML">XML</option>
+  <option value="JSONv2">JSONv2</option>
+  <option value="REST">REST</option>
+</select>
+Save-to-File: <select name="save">
+  <option value="no">No</option>
+  <option value="yes">Yes</option>
+</select>
+Records: <input name="count" type="text" value="10" size=4>
+JID: <input name="jid" type="text" size=40>
+<br><input name="fields" type="text" size=80> Fields
+<br><input name="query" type="text" size=80> Query
+<br><textarea name="payload" rows=3 cols=81></textarea> Content
+<br>Content-Type: <select name="content">
+  <option value="">---</option>
+  <option value="application/json">json (raw)</option>
+  <option value="@application/json">json (file)</option>
+  <option value="text/plain">text (raw)</option>
+  <option value="@text/plain">text (file)</option>
+  <option value="application/x-www-form-urlencoded">url</option>
+  <option value="@image/jpeg">jpeg</option>
+  <option value="@image/png">png</option>
+  <option value="@application/vnd.openxmlformats-officedocument.wordprocessingml.document">docx</option>
+  <option value="@application/msword">doc</option>
+  <option value="@application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">xlsx</option>
+  <option value="@application/vnd.ms-excel">xls</option>
+  <option value="@application/vnd.openxmlformats-officedocument.presentationml.presentation">pptx</option>
+  <option value="@application/vnd.ms-powerpoint">ppt</option>
+  <option value="@application/pdf">pdf</option>
+</select>
+Method: <select name="method">
+  <option value="">---</option>
+  <option value="GET">GET</option>
+  <option value="POST">POST</option>
+  <option value="PUT">PUT</option>
+  <option value="PATCH">PATCH</option>
+  <option value="DELETE">DELETE</option>
+</select>
+Action: <select name="action">
+  <option value="">---</option>
+  <option value="insert">Insert</option>
+  <option value="update">Update</option>
+  <option value="deleteMultiple">Delete</option>
+</select>
+<input type="submit" value="Submit">
+</form>
+</html>
