@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 
 import sys
 import os
@@ -108,7 +108,11 @@ if __name__ == "__main__":
 	else:
 		reply, jid = nowhttp(uri, params, jid, method=method)
 
-	if export != "REST":
+	if export == "XLSX":
+		save = "yes"
+		decode = False
+		banner += "Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet\n"
+	elif export != "REST":
 		banner += "Content-Type: text/plain\n"
 	elif save == "yes":
 		banner += "Content-Type: application/octet-stream\n"
