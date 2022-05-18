@@ -19,7 +19,7 @@ APIPROXY = None
 
 APIHOST = 'https://' + APIHOST
 
-def nowhttp (uri, params, jid, payload=None, content="", method=""):
+def nowhttp (uri, params, jid=None, payload=None, content="", method=""):
 
 	headers = {}
 	cookies = {}
