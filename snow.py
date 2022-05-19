@@ -9,9 +9,9 @@ from requests.auth import HTTPBasicAuth
 import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-APIHOST = os.getenv('APIHOST', 'dev93091.service-now.com')
-APIUSER = os.getenv('APIUSER', 'admin')
-APIPASS = os.getenv('APIPASS', 'p*HlLe19Iu@N')
+APIHOST = os.getenv('APIHOST', '')
+APIUSER = os.getenv('APIUSER', '')
+APIPASS = os.getenv('APIPASS', '')
 APIMETHOD = os.getenv('APIMETHOD', '')
 APICONTENT= os.getenv('APICONTENT', '')
 APIAUTH = HTTPBasicAuth(APIUSER, APIPASS)
